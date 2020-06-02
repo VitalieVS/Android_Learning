@@ -9,9 +9,21 @@ fun saySomething(): Unit {
     //procedura
 }
 
+fun sayHelloArg(greet: String, vararg items:String) {
+    items.forEach{ value ->
+        println("Hi $value")}
+}
+
+fun sayHello(items:List<String>):Unit {
+    items.forEach{ value ->
+    println("Hi $value")}
+}
+
 fun nullReturn(): String? {
     return null
 }
+
+fun greetSomeone(greet: String = "Hello", name: String = "User") = println("$greet $name")
 
 //single expr function
 
@@ -58,7 +70,11 @@ fun main() {
     things.forEachIndexed { index, s ->
         println("Index: $index == $s")
     }
+    //sayHello(things)
+    sayHelloArg("hey" , *things)
 
-    var map = mapOf(1 to "a", 2 to "b", 3 to "c")
+    val map = mutableMapOf(1 to "a", 2 to "b", 3 to "c")
+    map[4] = "d"
     map.forEach { (key, value) -> println("$key -> $value")}
+    greetSomeone(name = "Ion", greet = "Salut")
 }
