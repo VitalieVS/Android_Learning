@@ -51,4 +51,14 @@ fun main() {
     for (thing in things) {
         println(thing)
     }
+    things.forEach { value ->
+        println(value)
+        println("------")
+    }
+    things.forEachIndexed { index, s ->
+        println("Index: $index == $s")
+    }
+
+    var map = mapOf(1 to "a", 2 to "b", 3 to "c")
+    map.forEach { (key, value) -> println("$key -> $value")}
 }
