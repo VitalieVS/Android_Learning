@@ -2,8 +2,11 @@ fun getName(name: String): String {
     return "Hi $name"
 }
 
+fun sayBye(name :String) = "Good bye $name"
+
 fun saySomething(): Unit {
     println("...something")
+    //procedura
 }
 
 fun nullReturn(): String? {
@@ -39,4 +42,13 @@ fun main() {
     }
     saySomething()
     println(sayHi())
+    println(sayBye(name))
+
+    var things = arrayOf("Dota2", "Programming", "...etc")
+    println(things.size)
+    println(things[0])
+    println(things.get(0))
+    for (thing in things) {
+        println(thing)
+    }
 }
