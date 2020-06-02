@@ -2,6 +2,18 @@ fun getName(name: String): String {
     return "Hi $name"
 }
 
+fun saySomething(): Unit {
+    println("...something")
+}
+
+fun nullReturn(): String? {
+    return null
+}
+
+//single expr function
+
+fun sayHi() = "Hey"
+
 fun main() {
     var name: String? = "Naasfds"
     name = "dsfdffgds"
@@ -25,4 +37,6 @@ fun main() {
         null -> println()
         else -> println(getName(name))
     }
+    saySomething()
+    println(sayHi())
 }
