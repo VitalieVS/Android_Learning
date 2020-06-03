@@ -1,5 +1,4 @@
 fun main() {
-    val person = Person()
-    person.firstName
-    person.lastName
+    val person = Person("Mirana", "BH")
+    person.printInfo()
 }

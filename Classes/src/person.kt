@@ -1,14 +1,15 @@
-class Person(val firstName: String, val lastName: String) {
-//secondary constructor
-    init {
-    println("1ul")
-
-}
-    constructor() :this("Dota", "Pudge") {
-        println("2lea construcotr")
-}
-    init {
-        println("2lea")
-
+class Person(val firstName: String = "default", val lastName: String = "value") {
+    var nickName: String? = null
+        set(value) {
+            field = value
+            println("new nick = $value")
+        }
+        get() {
+            println("Returned: $field")
+            return field
+        }
+    fun printInfo() {
+        val check = nickName ?: "No nick"
+        println(check)
     }
 }
