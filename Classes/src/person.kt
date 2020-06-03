@@ -1,4 +1,6 @@
+//internal private
 class Person(val firstName: String = "default", val lastName: String = "value") {
+    //protected private
     var nickName: String? = null
         set(value) {
             field = value
